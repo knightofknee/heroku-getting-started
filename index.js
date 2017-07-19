@@ -26,7 +26,8 @@ app.get('/db', function (request, response) {
       else
        { response.render('pages/db', {results: result.rows} ); }
     });
-  });
+  })
+  .catch(console.log(err))
 });
 
 app.get('/cool', function(request, response) {
